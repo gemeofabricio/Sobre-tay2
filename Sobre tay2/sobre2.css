@@ -1,20 +1,39 @@
+.banner{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 *{
     margin: 0;
     background-color: rgb(198, 151, 241);
+    max-width: 100%;
 }
 h1{
     font-size: 80px;
     justify-content: center;
     text-align: center;
+    font-family: 'Patrick Hand', cursive;
 }
 h2{
     font-size: 50px;
     justify-content: center;
     text-align: center;
+    font-family: 'Patrick Hand', cursive;
 }
-p{
-    text-align: center;
+.NossaHistoria p{
+    text-align: justify;
     font-size: 20px;
+    font-family: 'Patrick Hand', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
 }
 .card{
     display: flex;
@@ -26,6 +45,10 @@ p{
     text-align: justify;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
     position: relative;
+}
+.card p{
+    font-size: 25px;
+    text-align: center;
 }
 .card::before{
     content: '';
@@ -40,7 +63,8 @@ p{
     margin-bottom: 20px;
 }
 .icon img{
-    width: 250px;
+    max-width: 300px;
+    max-height: 375px;
 }
 
 .content {
@@ -75,6 +99,7 @@ p{
 }
 .content p {
     color: black;
+    font-family: 'Patrick Hand', cursive;
 }
 #read_button {
     border: none;
@@ -99,4 +124,22 @@ p{
 }
 .card.active .content::before {
     visibility: hidden;
+}
+
+.MissaoVisaoValores{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.NossaHistoria{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.NossaHistoria p{
+    font-size: 30px;
 }
