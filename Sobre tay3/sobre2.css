@@ -19,113 +19,27 @@ h1{
     font-size: 80px;
     justify-content: center;
     text-align: center;
-    font-family: 'Patrick Hand', cursive;
+    
 }
 h2{
     font-size: 50px;
     justify-content: center;
     text-align: center;
-    font-family: 'Patrick Hand', cursive;
+    
+}
+
+.NossaHistoria{
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 3rem;
+    margin-right: auto;
+    
 }
 .NossaHistoria p{
     text-align: justify;
     font-size: 20px;
-    font-family: 'Patrick Hand', cursive;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
+    
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    padding: 25px;
-    background-color: rgb(162, 75, 243);
-    text-align: justify;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
-    position: relative;
-}
-.card p{
-    font-size: 25px;
-    text-align: center;
-}
-.card::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 20px solid transparent;
-    border-top: 20px solid black;
-    border-right: 20px solid black;
-}
-.icon {
-    margin-bottom: 20px;
-}
-.icon img{
-    max-width: 300px;
-    max-height: 375px;
-}
-
-.content {
-    height: 215px;
-    overflow: hidden;
-    position: relative;
-}
-
-.content::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-color: linear-gradient(transparent, rgb(177, 103, 247));
-}
-
-.content h3{
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 20px;
-    position: relative;
-}
-.content h3::before {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 40px;
-    background-color: rgb(162, 75, 243);
-    bottom: 4px;
-    border-radius: 100px;
-}
-.content p {
-    color: black;
-    font-family: 'Patrick Hand', cursive;
-}
-#read_button {
-    border: none;
-    padding: 10px;
-    border-radius: 2px;
-    margin-top: 15px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.2s ease-in-out;
-}
-
-#read_button:hover {
-    background-color: transparent;
-    color: black;
-    transition: all 0.2s ease-in-out;
-}
-.card.active .content {
-    height: auto;
-}
-.card.active .content::before {
-    visibility: hidden;
-}
-
 .MissaoVisaoValores{
     display: flex;
     justify-content: space-around;
@@ -135,11 +49,118 @@ h2{
     flex-wrap: wrap;
 }
 
-.NossaHistoria{
-    max-width: 1000px;
+.card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#333, #333);
+    transition: all .5s;
+}
+
+.card:hover {
+    background-image: linear-gradient(#672abf, #380e74);
+}
+
+.card .img {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url('./assets/Evelynn.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+}
+
+.card:hover .img {
+    width: 230px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 260px;
+    padding: 70px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .content .desc {
+    font-size: 18px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+}
+
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
+}
+
+.historia{
+    width: 1000px;
+    border-radius: 50px;
+    border: #333 solid 1px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    
 }
-.NossaHistoria p{
-    font-size: 30px;
+
+.MissaoVisaoValores{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80vh;
 }
